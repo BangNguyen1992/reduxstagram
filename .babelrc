@@ -12,8 +12,11 @@
     },
     "production": {
       "plugins": [
-        ["transform-object-rest-spread"],
-        ["transform-react-display-name"]
+        "transform-object-rest-spread",
+        "transform-react-display-name",
+        "babel-plugin-add-module-exports",
+        "transform-class-properties",
+        "transform-do-expressions"
       ]
     }
   }
