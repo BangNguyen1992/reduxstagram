@@ -1,17 +1,26 @@
 import React, { Component } from 'react';
+import Photo from './Photo';
+import Comments from './Comments';
 // import PropTypes from 'prop-types';
 // import { Link } from 'react-router-dom';
 
-export default class Single extends Component {
-  render() {
-    return (
-      <div className="single-photo">
-      I am a single
-      </div>
-    );
-  }
-}
 
-// Single.propTypes = {
+const Single = props => {
+  const postId = props.params.postId;
+  const i = props.posts.findIndex(post => post.code === postId);
+  const post = props.posts[i];
+  const postComments = props.comments[postId] || [];
 
-// };
+  return (
+    <div className="single-photo">
+      <Photo i={i} post={post} {...props} />
+      <Comments postComments={postComments} {...props}/>
+    </div>
+  );
+};
+
+Single.propTypes = {
+
+};
+
+export default Single;
