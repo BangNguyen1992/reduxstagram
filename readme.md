@@ -9,6 +9,8 @@ Demo: https://bangnguyen-redux.netlify.com
 
 * Using Webpack v4 to bundle and task runner
 
+* Can *like* and *add/remove* comment to the image
+
 * Hot Reloading Redux Reducers
 
 * Support Redux dev tool
