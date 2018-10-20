@@ -1,5 +1,5 @@
 import React from 'react'
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import { Link } from 'react-router';
 import CSSTransitionGroup from 'react-addons-css-transition-group';
 
@@ -7,7 +7,7 @@ const Photo = (props) => {
   return (
     <div className="grid-figure">
       <div className="grid-photo-wrap">
-        <Link to={`/view/${props.post.id}`}>
+        <Link to={`/view/${props.post.code}`}>
           <img src={props.post.display_src} alt={props.post.caption}></img>
         </Link>
 
